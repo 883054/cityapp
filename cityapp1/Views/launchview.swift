@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  launchview.swift
 //  cityapp1
 //
 //  Created by Mohammad Jamali on 3/11/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct launchview: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct launchview_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        launchview()
     }
 }
