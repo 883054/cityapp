@@ -11,6 +11,7 @@
 		88BC22D629BD286300AC1CA0 /* launchview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC22D529BD286300AC1CA0 /* launchview.swift */; };
 		88BC22D829BD286400AC1CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC22D729BD286400AC1CA0 /* Assets.xcassets */; };
 		88BC22DB29BD286400AC1CA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC22DA29BD286400AC1CA0 /* Preview Assets.xcassets */; };
+		88BC230229BD2F4000AC1CA0 /* contentmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC230129BD2F4000AC1CA0 /* contentmodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		88BC22D529BD286300AC1CA0 /* launchview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchview.swift; sourceTree = "<group>"; };
 		88BC22D729BD286400AC1CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88BC22DA29BD286400AC1CA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88BC230129BD2F4000AC1CA0 /* contentmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentmodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		88BC22E329BD291500AC1CA0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				88BC230129BD2F4000AC1CA0 /* contentmodel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				88BC22D629BD286300AC1CA0 /* launchview.swift in Sources */,
 				88BC22D429BD286300AC1CA0 /* cityapp1App.swift in Sources */,
+				88BC230229BD2F4000AC1CA0 /* contentmodel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cityapp1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "give permission bitch";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +326,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cityapp1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "give permission bitch";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
