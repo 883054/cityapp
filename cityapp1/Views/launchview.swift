@@ -6,21 +6,29 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct launchview: View {
+    @EnvironmentObject var modelV1 : contentmodelC
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+//detec the authorization status of geolocation the user
+        if modelV1.authorizationstate == .notDetermined{
+            //if not determinded, show onboarding
         }
-        .padding()
+        else if modelV1.authorizationstate == .authorizedAlways || modelV1.authorizationstate == .authorizedWhenInUse {
+            //if approved, show home view
+            homeview()
+        }
+        else {
+            //if denied show the denied view
+        }
+        
     }
 }
 
 struct launchview_Previews: PreviewProvider {
     static var previews: some View {
-        launchview()
+        launchview().environmentObject(contentmodelC())
     }
 }
