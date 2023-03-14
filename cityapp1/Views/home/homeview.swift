@@ -10,6 +10,7 @@ import SwiftUI
 struct homeview: View {
     @EnvironmentObject var modelV2 : contentmodelC
     @State var ismapshowing = false
+    @State var selectedbusiness: businessS?
     var body: some View {
         if modelV2.restaurantsV.count != 0 || modelV2.sightsV.count != 0 {
             
@@ -22,14 +23,37 @@ struct homeview: View {
                             Image(systemName: "location")
                             Text("ghanbary")
                             Spacer()
-                            Text("switch to map view")
+                            Button("switch to map view") {
+                                self.ismapshowing = true
+                            }
+                            
                         }
                         Divider()
-                        businesslist()
+                        businesslist().ignoresSafeArea()
                     }
                 }
                 else {
-                    //show map view
+                    ZStack (alignment: .top) {
+                        //show map view
+                        businessmap(selectedbusiness2: $selectedbusiness).ignoresSafeArea().sheet(item: $selectedbusiness) { business in
+                            //create a business detail view instance
+                            //pass in the selected business
+                            businessdetail(business3: business)
+                        }
+                        //overlay
+                        ZStack {
+                            Rectangle().foregroundColor(.white).frame(height: 48)
+                            HStack {
+                                Image(systemName: "location")
+                                Text("ghanbary")
+                                Spacer()
+                                Button("switch to list view") {
+                                    self.ismapshowing = false
+                                }
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
